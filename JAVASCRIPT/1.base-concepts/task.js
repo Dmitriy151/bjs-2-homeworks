@@ -16,9 +16,9 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   if (isNaN(percent) || isNaN(contribution) || isNaN(amount)) {
     return false;
   }
-  let P = percent/100/12;
-  let S = amount - contribution;
-  let amountPerMonth = S * (P + (P / (((1 + P)**countMonths) - 1)));
+  let PercFormula = percent/100/12;
+  let AmoFormula = amount - contribution;
+  let amountPerMonth = AmoFormula * (PercFormula + (PercFormula / (((1 + PercFormula)**countMonths) - 1)));
   let totalAmount = amountPerMonth * countMonths;
   return Number(totalAmount.toFixed(2));
 }
