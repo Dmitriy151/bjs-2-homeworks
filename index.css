@@ -1,4 +1,5 @@
 html, body {
+    min-width: max-content;
     height: 100%;
 }
 html {
@@ -6,7 +7,53 @@ html {
     margin: auto;
 }
 body {
+    background-color: #333333;;
     display: table-cell;
     vertical-align: middle;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    /* Ниже расположены параметры для плавного переключения страниц */
+    opacity:0;
+    transition:1s;
+}
+main {
+    display: block;
+    border-top: 6px solid #505050;
+    border-left: 3px solid #707070;
+    border-right: 6px solid #505050;
+    border-bottom: 3px solid #707070;
+    border-radius: 10px;
+    background-color: #c7c7c7d7;
+    padding: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+div.spoiler_head { 
+    cursor: pointer; 
+    font-weight: bold; 
+    background-color: #c7c7c7d7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid #505050;
+    border-left: 2px solid #505050;;
+    border-top: 4px solid #505050;
+    border-right: 4px solid #505050;
+    box-shadow: 0 3px 2px -2px #505050;
+    padding: 10px;
+    user-select: none;
+}
+div.spoiler_body { 
+    display: none;  
+    background-color: #c7c7c7d7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 4px solid #505050;
+    border-bottom: 2px solid #505050;
+    border-left: 2px solid #505050;
+    box-shadow: 0 3px 2px -2px #505050;
+    padding: 10px;
+}
+p {
+    font-size: large;
 }
