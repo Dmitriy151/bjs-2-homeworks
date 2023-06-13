@@ -1,3 +1,4 @@
+// Задание 1
 function getArrayParams(...arr) {
   let min = arr[0];
   let max = arr[0];
@@ -14,6 +15,7 @@ function getArrayParams(...arr) {
   return { min: min, max: max, avg: avg };
 }
 
+// Задание 2
 function summElementsWorker(...arr) {
   if (arr.length === 0) {
     return 0;
