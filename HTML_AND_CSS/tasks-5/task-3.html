@@ -4,45 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles-common.css">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Экран приветствия</title>
+  <title>Направления Нетологии</title>
 </head>
-<style>   
-body {
+<style>
+    body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  font-size: 15px;
   margin: 0;
-  background-color: #69128d;
-  font-family: tahoma;
+  
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.container {
-  font-family: lobster;
-  width: 880px;
-  padding-top: 195px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: 40px;
+.page {
+  padding: 50px;
+  min-width: 900px;
+  margin: auto;
 }
 
-p {
-  color: white;
-  line-height: 1.5;
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-@font-face {
-    font-family: lobster;
-    src: url(https://netology-code.github.io/html-2-homeworks/flex-elements-positioning/font-face/fonts/lobster-regular.woff);
-    font-weight: 400;
-    font-style: normal;
+.search .search-hint {
+  display: inline-block;
+  vertical-align: middle;
+  
+  font-size: 14px;
+  font-weight: 700;
+  width: 200px;
+  margin-right: 30px;
+}
+
+.search-group {
+  text-align: right;
+}
+
+.button {
+  box-sizing: border-box;
+  height: 53px;
+  padding: 5px 45px 3px;
+  border: none;
+  
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+  
+  cursor: pointer;
+  margin-left: 20px;
+  background-color: #9b59b6;
+  border-radius: 25px;
+}
+
+.button:hover {
+  background-color: #b062d0;
+}
+
+.button:focus {
+  outline-offset: 5px;
+  outline: 2px solid #9b59b6;
+}
+
+.field {
+  box-sizing: border-box;
+  width: 485px;
+  border: 2px solid #dadada;
+  padding: 10px 25px 10px 65px;
+  margin: 0;
+  
+  display: inline-block;
+  vertical-align: middle;
+  
+  font-size: 14px;
+  height: 55px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  background: url(https://netology-code.github.io/html-2-homeworks/form-elements/search-field/img/search.svg) no-repeat left;
+  background-size: 25px;
+  background-position-x: 20px;
+  background-position-y: center;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #9b59b6;
 }
 </style>
 <body>
 <div class="page">
-  <div class="container">
-    <p>
-      Верстка это не просто реализация картинки, это первый шаг к удобному для людей интерфейсу
-    </p>
-  </div>
+  <form class="search">
+  <label class="search-group"></label>
+  <span class="search-hint">Не можете что-то найти? Используйте поиск!</span>
+  <input class="field" name="query" placeholder="Например, Iphone X" required>
+  <button class="button">Найти</button>
+  </form>
 </div>
 </body>
 </html>
