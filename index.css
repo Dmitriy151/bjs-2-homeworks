@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px; /* закругления плашки */
 }
 main {
-    max-width: 600px;
+    width: 600px;
     margin: auto;
     border-top: 6px solid #505050;
     border-left: 3px solid #707070;
