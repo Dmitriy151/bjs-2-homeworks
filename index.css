@@ -1,23 +1,23 @@
-html, body {
+html {
     min-width: max-content;
     height: 100%;
-}
-html {
-    display: table;
-    margin: auto;
+    /* Код прокрутки на будущее. Сейчас работает только на mazilla firefox */
+    scrollbar-width: thin;          /* "auto" или "thin"  */
+    scrollbar-color: #505050 transparent;   /* плашка скролла и дорожка */ 
+    /* Ниже расположен важный параметр для плавного переключения страниц (цветность затемнения) */ 
+    background-color: black;
 }
 body {
-    background-color: #333333;;
-    display: table-cell;
-    vertical-align: middle;
+    background-color: #333333;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    position: relative;
     /* Ниже расположены параметры для плавного переключения страниц */
     opacity:0;
     transition:1s;
 }
 main {
-    display: block;
+    width: auto;
     border-top: 6px solid #505050;
     border-left: 3px solid #707070;
     border-right: 6px solid #505050;
@@ -25,8 +25,8 @@ main {
     border-radius: 10px;
     background-color: #c7c7c7d7;
     padding: 30px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 div.spoiler_head { 
