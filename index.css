@@ -8,16 +8,28 @@ html {
     background-color: black;
 }
 body {
-    background-color: #333333;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     position: relative;
+    display: flex;
     /* Ниже расположены параметры для плавного переключения страниц */
     opacity:0;
     transition:1s;
 }
+/* Это актуальный код прокрутки для всех браузеров, кроме IE и Firefox. */
+body::-webkit-scrollbar {
+    width: 4px; /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: transparent; /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #505050; /* цвет плашки */
+    border-radius: 20px; /* закругления плашки */
+}
 main {
-    width: auto;
+    max-width: 600px;
+    margin: auto;
     border-top: 6px solid #505050;
     border-left: 3px solid #707070;
     border-right: 6px solid #505050;
