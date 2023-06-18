@@ -12,6 +12,8 @@ body {
     text-align: center;
     position: relative;
     display: flex;
+    margin: 0;
+    min-height: 100%;
     /* Ниже расположены параметры для плавного переключения страниц */
     opacity:0;
     transition:1s;
@@ -28,7 +30,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px; /* закругления плашки */
 }
 main {
-    width: 600px;
+    width: 700px;
     margin: auto;
     border-top: 6px solid #505050;
     border-left: 3px solid #707070;
@@ -66,6 +68,63 @@ div.spoiler_body {
     box-shadow: 0 3px 2px -2px #505050;
     padding: 10px;
 }
-p {
+input {
     font-size: large;
+}
+p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+p a {
+    font-size: larger;
+}
+a /* Общий формат ссылок */ {
+    margin: 5px;
+    text-decoration: none;
+    /* box-shadow: -1px 2px #606060; */
+    border-radius: 10px;
+    border-bottom: 2px solid #606060;
+    border-left: 2px solid #606060;
+    background-color: #70707044;
+    padding: 8px;
+    box-shadow:
+    4px -4px #505050,
+    3px -3px #505050,
+    2px -2px #505050,
+    1px -1px #505050;
+    -webkit-transform: translateX(-0px);
+    transform: translateX(-0px);
+    -webkit-transform: translateY(-0px);
+    transform: translateY(-0px);
+    transition: all 0.3s ease;
+}
+a:link /* Непосещенная */ {
+    color: inherit; 
+}
+a:visited /* Посещенная */ {
+    color: inherit;
+}
+a:hover /*При наведении. Не нажатая.*/ {
+    /* color: #005eff; 
+    text-shadow: #003694 1px -1px 0px; */
+    border-radius: 10px;
+    border-bottom: 2px solid #606060;
+    border-left: 2px solid #606060;
+    box-shadow:
+    2px -2px #505050,
+    1px -1px #505050;
+    -webkit-transform: translateX(2px) translateY(-2px);
+    transform: translateX(2px) translateY(-2px);
+}
+a:active /* При наведении. Нажатая */ {
+    /* color: #81adff; 
+    text-shadow: #2f4d86 1px -1px 0px; */
+    box-shadow:
+    2px -2px #505050,
+    1px -1px #505050;
+    -webkit-transform: translateX(2px) translateY(-2px);
+    transform: translateX(2px) translateY(-2px);
 }
