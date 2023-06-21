@@ -6,15 +6,15 @@ function solveEquation(a, b, c) {
   if (d>0) {
     arr[0]=(-b + Math.sqrt(d) )/(2*a); 
     arr[1]=(-b - Math.sqrt(d) )/(2*a);
-    console.log(arr);
+    //console.log(arr);
     return arr;
   }else if (d===0) {
     arr[0]=-b/(2*a);
-    console.log(arr);
+    //console.log(arr);
     return arr;
   }else if(d<0){
     arr[0]=undefined;
-    console.log(arr);
+    //console.log(arr);
     return arr;
   };
   
