@@ -13,7 +13,7 @@ function solveEquation(a, b, c) {
     //console.log(arr);
     return arr;
   }else if(d<0){
-    arr[0]=undefined;
+    //arr[0]=undefined;
     //console.log(arr);
     return arr;
   };
