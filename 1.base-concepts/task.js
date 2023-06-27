@@ -23,7 +23,7 @@ function solveEquation(a, b, c) {
 solveEquation();
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  let s=amount;
+  let s=amount;//Посчитайте тело кредита — сумму, которую нужно вернуть банку (сумма кредита минус первоначальный взнос).
   let p=percent/12/100;
   let n=countMonths;
   let payment = (s * (p+(p/(Math.pow((1 + p),n) - 1))));
@@ -34,4 +34,4 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   return sum;
 };
 
-calculateTotalMortgage(10, 0, 50000, 12);
+calculateTotalMortgage(10, 20000, 20000, 48);
