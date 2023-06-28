@@ -34,4 +34,4 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   return sum;
 };
 
-calculateTotalMortgage(10, 0, 50000, 12);
+calculateTotalMortgage(10, 20000, 20000, 24);
