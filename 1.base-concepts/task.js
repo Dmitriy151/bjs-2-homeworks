@@ -22,19 +22,31 @@ function solveEquation(a, b, c) {
 
 solveEquation();
 
-function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  let s=amount;//Посчитайте тело кредита — сумму, которую нужно вернуть банку (сумма кредита минус первоначальный взнос).
-  let p=percent/12/100;
-  let n=countMonths;
-  let payment = s * (p+(p/(Math.pow((1 + p),n) - 1)));
-  //Вычисляется доля процентов (i) в ежемесячном взносе по формуле
-  let i=s*p;//Здесь S — остаточный объем средств, P — упомянутая ранее процентная ставка
+// function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+//   let s=amount;//Посчитайте тело кредита — сумму, которую нужно вернуть банку (сумма кредита минус первоначальный взнос).
+//   let p=percent/12/100;
+//   let n=countMonths;
+//   let payment = s * (p+(p/(Math.pow((1 + p),n) - 1)));
+//   //Вычисляется доля процентов (i) в ежемесячном взносе по формуле
+//   let i=s*p;//Здесь S — остаточный объем средств, P — упомянутая ранее процентная ставка
   
-  let sum1= (payment*n)-contribution;
-  let sum=parseFloat(sum1.toFixed(2))
-  console.log ('sum= '+sum);
-  console.log ('payment= '+payment);
-  return sum;
-};
+//   let sum1= (payment*n)-contribution;
+//   let sum=parseFloat(sum1.toFixed(2))
+//   console.log ('sum= '+sum);
+//   console.log ('payment= '+payment);
+//   return sum;
+// };
 
-calculateTotalMortgage(10, 0, 50000, 12);
+// calculateTotalMortgage(10, 0, 50000, 12);
+
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+  // Ежемесячная процентная ставка
+  let monthPercent = percent / 100 / 12;
+  // Сумма, которую нужно вернуть банку
+  let credit = amount - contribution;
+  // Ежемесячная оплата
+  let monthPayment = credit * (monthPercent + monthPercent / ((1 + monthPercent) ** countMonths - 1));
+  // Общая сумма
+  let totalSum = (monthPayment * countMonths).toFixed(2);
+  return Number(totalSum);  
+}
