@@ -6,6 +6,7 @@ function getArrayParams(...arr) {
   for (let i = 0; i < arr.length; i++) {
     sum+=arr[i];
     avg=sum/arr.length;
+    avg=parseFloat(avg.toFixed(2));
     if (arr[i]>max) {
       //sum+=arr[i];
       max=arr[i];
