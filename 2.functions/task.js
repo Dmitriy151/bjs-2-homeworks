@@ -22,8 +22,11 @@ function getArrayParams(...arr) {
 //getArrayParams(-99, 99, 10);
 result=getArrayParams(-99, 99, 10);
 console.log(result);
-function summElementsWorker(...arr) {
 
+function summElementsWorker(...arr) {
+  for (let i = 0; i < arr.length; i++) {
+    sum+=arr[i];
+  }
 }
 
 function differenceMaxMinWorker(...arr) {
