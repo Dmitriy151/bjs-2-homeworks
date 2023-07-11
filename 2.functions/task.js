@@ -20,7 +20,7 @@ function getArrayParams(...arr) {
   return { min: min, max: max, avg: avg };
 }
 //getArrayParams(-99, 99, 10);
-result=getArrayParams(-99, 99, 10);
+let result=getArrayParams(-99, 99, 10);
 console.log(result);
 
 function summElementsWorker(...arr) {
@@ -30,8 +30,17 @@ function summElementsWorker(...arr) {
 }
 
 function differenceMaxMinWorker(...arr) {
-
+  let min =  0;
+  let max = 0;
+  let difference;
+  Math.min(...arr);    
+  Math.max(...arr);
+  difference=max-min;
+  return { difference: difference };
 }
+
+let result2=differenceMaxMinWorker(-99, 99, 10);
+console.log('result2= '+result2);
 
 function differenceEvenOddWorker(...arr) {
 
