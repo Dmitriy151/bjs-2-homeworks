@@ -5,6 +5,7 @@ function getArrayParams(...arr) {
   let avg=0;
   for (let i = 0; i < arr.length; i++) {
     sum+=arr[i];
+    console.log('sum1='+sum);
     avg=sum/arr.length;
     avg=parseFloat(avg.toFixed(2));
     if (arr[i]>max) {
@@ -24,10 +25,15 @@ let result=getArrayParams(-99, 99, 10);
 console.log(result);
 
 function summElementsWorker(...arr) {
+  let sum=0;
   for (let i = 0; i < arr.length; i++) {
     sum+=arr[i];
+    
   }
+  return sum;
 }
+let result1=summElementsWorker(55, 99, 10);
+console.log('result1='+result1);
 
 function differenceMaxMinWorker(...arr) {
   let min =  0;
