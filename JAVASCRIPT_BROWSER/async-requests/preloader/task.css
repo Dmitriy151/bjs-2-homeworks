@@ -1,14 +1,28 @@
 body {
   font-family: Arial;
 }
+
 .item {
   display: flex;
+}
+
+h1 {
+  text-align: center;
+}
+
+#items {
+  display: flex;
+  margin: 35%;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-flow: column;
 }
 
 .item__code {
   margin-right: 5px;
   font-weight: bold;
 }
+
 .item__value {
   margin-right: 5px;
 }
@@ -17,6 +31,7 @@ body {
   width: 100px;
   display: none;
 }
+
 .loader_active {
   display: block;
 }
