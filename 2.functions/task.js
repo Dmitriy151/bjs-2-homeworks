@@ -51,8 +51,8 @@ function differenceMaxMinWorker(...arr) {
     console.log('max='+min);
   }
 
-}if (arr.lenth===0) {
- return 0;
+  if (arr.lenth===0) {
+    return 0;
 }
   difference=max-min;
   console.log(difference);
