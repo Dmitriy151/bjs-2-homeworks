@@ -38,7 +38,7 @@ console.log('result1='+result1);
 function differenceMaxMinWorker(...arr) {
   let min = 0;
   let max = 0;
-  for (let i=0; i < arr.length; i++ )
+  for (let i=0; i < arr.length; i++ ){
   min=Math.min(...arr);    
   max=Math.max(...arr);
 
@@ -53,7 +53,7 @@ function differenceMaxMinWorker(...arr) {
 
   if (arr.lenth===0) {
     return 0;
-}
+}}
   difference=max-min;
   console.log(difference);
   return difference;
