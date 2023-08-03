@@ -36,8 +36,8 @@ let result1=summElementsWorker(55, 99, 10);
 console.log('result1='+result1);
 
 function differenceMaxMinWorker(...arr) {
-  let min = 0;
-  let max = 0;
+  let min = Infinity;
+  let max = -Infinity;
   let difference=0;
   min=Math.min(...arr);    
   max=Math.max(...arr);
@@ -45,7 +45,7 @@ function differenceMaxMinWorker(...arr) {
   console.log(difference);
   return difference;
 }
-differenceMaxMinWorker(55, 99, 10);
+differenceMaxMinWorker();
 //let result2=differenceMaxMinWorker();
 //console.log('result2= '+result2);
 //console.log('differenceMaxMinWorker= '+ differenceMaxMinWorker());
