@@ -21,7 +21,7 @@ const people = [
 ];
 
 function getUsersNamesInAgeRange(users, gender) {
-  let result = people.filter(user => user.gender === gender).map(user => user.age).reduce((acc, item, index, arr) => acc + item / (arr.length), 0);
+  let result = users.filter(user => user.gender === gender).map(user => user.age).reduce((acc, item, index, arr) => acc + item / (arr.length), 0);
   
   return (result);
   
