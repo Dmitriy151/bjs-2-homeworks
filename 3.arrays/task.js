@@ -27,4 +27,3 @@ function getUsersNamesInAgeRange(users, gender) {
   
 }
 
-console.log(getUsersNamesInAgeRange([], "мужской"));
