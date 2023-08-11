@@ -40,3 +40,13 @@ parsedselectedChairs.hallConfig = newHallConfig;
 parsedselectedChairs.takenChairs = takenChairs;
 // console.log(newHallConfig);
 localStorage.setItem('seance-data', JSON.stringify(parsedselectedChairs));
+document.querySelector(".acceptin-button").addEventListener("click", (event) => {
+    event.preventDefault();
+    fetch("https://jscp-diplom.netoserver.ru/", {
+        method: "POST",
+        headers: {
+            'Content-Type' : 'application/x-www-form-urlencoded'
+        },
+        body: `event=sale_add&timestamp=${parsedselectedChairs.seanceTimeStamp}&hallId=${parsedselectedChairs.hallId}&seanceId=${parsedselectedChairs.seanceId}&hallConfiguration=${newHallConfig}`,
+    });
+});
