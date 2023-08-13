@@ -297,6 +297,9 @@ body {
   display: flex;
   flex-wrap: nowrap;
   text-align: left;
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
 }
 .conf-step__legend .col {
   max-width: 25rem;
