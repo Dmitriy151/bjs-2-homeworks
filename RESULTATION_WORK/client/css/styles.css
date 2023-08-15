@@ -447,4 +447,7 @@ body {
   pointer-events: none
  }
 
-
+a {
+  font-size: medium;
+  color: white;
+}
